@@ -18,7 +18,8 @@ module.exports = {
       backgroundImage: {
         'homepage': "url('/src/assets/home/background-home-desktop.jpg')",
         'destination': "url('/src/assets/destination/background-destination-desktop.jpg')",
-        'crew': "url('/src/assets/crew/ background-crew-desktop.jpg')"
+        'crew': "url('/src/assets/crew/background-crew-desktop.jpg')",
+        'technology': "url('/src/assets/technology/background-technology-desktop.jpg')"
       }
     },
   },

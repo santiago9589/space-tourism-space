@@ -1,8 +1,9 @@
-import NavbarComponent from "../src/components/navbar/navbar.component"
-import WrapperNav from "./components/wrapper/wrapperComponent"
 import DestinationPage from "./pages/destination/DestinationPage"
 import HomePage from "./pages/home/HomePage"
-import {Routes,Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import CrewPage from "./pages/crew/CrewPage"
+import TechnologyComponent from "./pages/technology/TechnologyComponent"
+import TecnologyPage from "./pages/technology/TechnologyPage"
 
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
   return (
     <main className="h-screen w-screen">
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/destination" element={<DestinationPage />}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/destination" element={<DestinationPage />} />
+        <Route path="/crew" element={<CrewPage />} />
+        <Route path="/technology" element={<TecnologyPage />} />
       </Routes>
     </main>)
 }
