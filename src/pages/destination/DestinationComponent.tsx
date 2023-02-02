@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ContainerChild from '../../components/containerChild/ContainerChild'
 import ContainerContext from '../../components/containerContent/ContainerContext'
-import { Destination } from '../../types/destination'
-import { api } from "../../../api/api"
+import {useDestination} from "../../../hooks/useDestination"
 import Paragrahp from '../../components/paragrahp/Paragrahp'
+import LinkComponentDestination from './LinkDestination'
+import NavOptions from '../../components/navOptions/navOptions'
 
 const DestinationComponent = () => {
 
-    const [data, setData] = useState<Destination[]>([])
-    const [currentDestination, setcurrentDestination] = useState<Destination>()
-
-    useEffect(() => {
-        api.destination().then((response) => {
-            setData(response)
-            setcurrentDestination(response[0])
-        })
-    }, [])
+    const [destinatios,currentDestination,handleDestination] = useDestination()
 
     return (
         <ContainerContext>
@@ -28,8 +21,21 @@ const DestinationComponent = () => {
                 </section>
             </ContainerChild>
             <ContainerChild>
-                <section className='w-full h-full flex flex-col'>
-                    <div className='text-whiteReq h-[50px]'>navbar</div>
+                <section className='w-full h-full flex flex-col mt-2'>
+                    <NavOptions>
+                        {
+                            destinatios.map((destination) => {
+                                return (
+                                    <LinkComponentDestination 
+                                    title={destination.name} 
+                                    active={destination.name === currentDestination?.name}  
+                                    handleDestination={()=>handleDestination(destination)}
+                                    key={destination.name}
+                                    />
+                                )
+                            })
+                        }
+                    </NavOptions>
                     <article className='w-full h-full flex items-center flex-col '>
                         <h1 className="font-bellefair text-[100px] text-center text-whiteReq uppercase">{currentDestination?.name}</h1>
                         <Paragrahp text={currentDestination?.description!} />

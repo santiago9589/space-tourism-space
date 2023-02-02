@@ -1,8 +1,11 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import { LinksUrl } from '../../types/LinkUrl'
 import LinkComponent from './link.navbar.component'
 
 const NavbarComponent = () => {
+
+    const location = useLocation()
 
     const links: LinksUrl[] = [{
         title: "01 home",
@@ -35,7 +38,7 @@ const NavbarComponent = () => {
                 {
                     links.map((element) => {
                         return (
-                            <LinkComponent title={element.title} url={element.url} key={element.title} />
+                            <LinkComponent title={element.title} url={element.url} key={element.title} active={location.pathname === element.title} />
                         )
                     })
                 }
