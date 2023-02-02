@@ -8,7 +8,7 @@ const LinkComponent = ({ title, url }: LinksUrl) => {
 
   return (
     <Link to={url}>
-      <h2 className= {`${url === location.pathname ? ("border-b-2 "):("")} box-border uppercase text-lg text-whiteReq font-barlow flex tracking-widest`}>{title}</h2>
+      <h2 className= {`${url === location.pathname ? ("border-b-2 "):("")} box-border uppercase text-lg text-whiteReq font-barlow tracking-widest h-full`}>{title}</h2>
     </Link>
   )
 }

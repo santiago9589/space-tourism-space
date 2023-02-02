@@ -8,7 +8,7 @@ interface props{
 }
 const WrapperNav = ({children,className}:props) => {
     return (
-        <main className={className}>
+        <main className={`${className} bg-cover`}>
             <NavbarComponent />
             {children}
         </main>
