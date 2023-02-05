@@ -14,8 +14,8 @@ const TechnologyComponent = () => {
             <ContainerChild>
                 <section className='w-full h-full'>
                     <h1 className="font-barlow text-[28px] text-start text-whiteReq uppercase tracking-[2.50px]">04 space launch 101</h1>
-                    <article className='flex w-full h-5/6'>
-                        <nav className='flex flex-col h-full w-1/4 items-center justify-center space-y-6'>
+                    <article className='flex w-full h-5/6 items-center flex-col xl:flex-row'>
+                        <nav className='flex xl:flex-col h-full xl:w-1/4 w-full items-center justify-center xl:space-y-6 space-x-6 xl:space-x-0'>
                             {
                                 tecnologies.map((crew, index) => {
                                     return (
@@ -38,11 +38,11 @@ const TechnologyComponent = () => {
                 </section>
             </ContainerChild>
             <ContainerChild>
-                <section className='w-full h-full flex flex-col  items-center justify-center'>
+                <section className='w-full h-full xl:flex xl:flex-col  xl:items-center xl:justify-center'>
                             <img 
-                            src={currentTecnology.images.landscape}
+                            src={currentTecnology.images.portrait}
                              alt="img.tecnology"
-                             className="w-[450px] h-[450px]"
+                             className="w-full h-[310px] xl:w-[450px] xl:h-[450px]"
                              />
                 </section>
             </ContainerChild>

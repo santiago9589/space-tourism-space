@@ -6,7 +6,7 @@ interface props{
 
 const ContainerContext = ({children}:props) => {
   return (
-    <section className='gap-4 box-border m-2 p-4 flex h-3/4 mt-8'>
+    <section className='gap-4 box-border m-2 p-4 flex flex-col h-full mt-8 xl:flex-row xl:h-3/4'>
         {children}
     </section>
   )

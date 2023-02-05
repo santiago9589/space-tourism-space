@@ -4,7 +4,7 @@ import HomeComponent from './HomeComponent'
 
 const HomePage = () => {
     return (
-        <WrapperNav className="bg-homepage w-full h-full">
+        <WrapperNav className="bg-homepage-sm md:bg-homepage-md xl:bg-homepage bg-center bg-cover w-full h-full">
             <HomeComponent />
         </WrapperNav>
     )

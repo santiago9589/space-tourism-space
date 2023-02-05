@@ -9,7 +9,7 @@ import TecnologyPage from "./pages/technology/TechnologyPage"
 function App() {
 
   return (
-    <main className="h-screen w-screen">
+    <main className="h-screen w-screen container mx-auto overflow-y-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/destination" element={<DestinationPage />} />

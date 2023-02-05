@@ -6,7 +6,7 @@ interface props{
 
 const Paragrahp = ({text}:props) =>{
     return (
-        <p className='font-barlow text-[18px] text-lilaReq capitalize w-full text-center'>{text}</p>
+        <p className='font-barlow xl:text-[25px] text-[18px] text-lilaReq capitalize w-full  md:w-2/3 xl:w-3/4 text-center'>{text}</p>
     )
 }
 
