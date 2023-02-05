@@ -1,11 +1,12 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { LinksUrl } from '../../types/LinkUrl'
 import LinkComponent from './link.navbar.component'
 
 const NavbarComponent = () => {
 
     const location = useLocation()
+    const navigate = useNavigate()
 
     const links: LinksUrl[] = [{
         title: "01 home",
@@ -27,7 +28,7 @@ const NavbarComponent = () => {
 
     return (
         <nav className='py-6 px-4 bg-gradient-to-r from-blackReq flex justify-between items-center w-full'>
-            <section className='flex w-1/3 '>
+            <section className='flex w-1/3 ' onClick={()=>{navigate("/")}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fillRule="evenodd">
                     <circle cx="24" cy="24" r="24" fill="#FFF" />
                     <path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />

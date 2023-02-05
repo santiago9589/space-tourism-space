@@ -6,7 +6,7 @@ interface props {
 
 const ContainerChild = ({ children }: props) => {
   return (
-    <section className='flex-1 border-2 border-whiteReq w-full h-full p-2'>
+    <section className='flex-1 w-full h-full p-2'>
         {children}
     </section>
   )
