@@ -13,7 +13,7 @@ const TechnologyComponent = () => {
         <ContainerContext>
             <ContainerChild>
                 <section className='w-full h-full'>
-                    <h1 className="font-barlow text-[28px] text-start text-whiteReq uppercase tracking-[2.50px]">04 space launch 101</h1>
+                    <h1 className="font-barlow md:text-[28px] text-[16px] text-start text-whiteReq uppercase tracking-[2.50px]">04 space launch 101</h1>
                     <article className='flex w-full h-5/6 items-center flex-col xl:flex-row'>
                         <nav className='flex xl:flex-col h-full xl:w-1/4 w-full items-center justify-center xl:space-y-6 space-x-6 xl:space-x-0'>
                             {
@@ -42,7 +42,7 @@ const TechnologyComponent = () => {
                             <img 
                             src={currentTecnology.images.portrait}
                              alt="img.tecnology"
-                             className="w-full h-[310px] xl:w-[450px] xl:h-[450px]"
+                             className="w-full h-[170px] md:w-full md:h-[310px] xl:w-[450px] xl:h-[450px]"
                              />
                 </section>
             </ContainerChild>

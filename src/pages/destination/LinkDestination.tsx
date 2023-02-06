@@ -11,7 +11,7 @@ interface propsDestinationLink{
 const LinkComponentDestination = ({title,active,handleDestination}: propsDestinationLink) => {
 
   return (
-      <h2 onClick={handleDestination} className= {`${active ? ("border-b-2 "):("")} box-border uppercase text-lg text-whiteReq font-barlow tracking-widest h-full`}>{title}</h2>
+      <h2 onClick={handleDestination} className= {`${active ? ("border-b-2 "):("")} box-border uppercase  text-[14px] md:text-lg text-whiteReq font-barlow tracking-widest h-full`}>{title}</h2>
   )
 }
 

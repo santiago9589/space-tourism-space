@@ -6,7 +6,7 @@ import TechnologyComponent from './TechnologyComponent'
 
 const TecnologyPage = () => {
     return (
-        <WrapperNav className="bg-technology w-full h-full">
+        <WrapperNav className="bg-technology-sm md:bg-technology-md xl:bg-technology bg-center w-full h-full">
             <TechnologyComponent/>
         </WrapperNav>
     )

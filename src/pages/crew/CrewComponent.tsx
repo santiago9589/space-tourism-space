@@ -15,10 +15,10 @@ const CrewComponent = () => {
         <ContainerContext>
             <ContainerChild>
                 <section className='w-full h-full flex flex-col'>
-                    <h1 className="font-barlow text-[28px] text-start text-whiteReq uppercase tracking-[2.50px]">03 Meet your crew</h1>
+                    <h1 className="font-barlow md:text-[28px] text-[16px] text-start text-whiteReq uppercase tracking-[2.50px]">03 Meet your crew</h1>
                     <section className='w-full h-2/3 flex  items-center justify-center flex-col'>
-                        <h3 className='text-center font-bellefair text-[32px] uppercase text-lilaReq'>{currentCrew.role}</h3>
-                        <h2 className='text-center font-bellefair text-[56px] uppercase text-whiteReq' >{currentCrew.name}</h2>
+                        <h3 className='text-center font-bellefair text-[16px] md:text-[32px] uppercase text-lilaReq'>{currentCrew.role}</h3>
+                        <h2 className='text-center font-bellefair text-[24px] md:text-[56px] uppercase text-whiteReq' >{currentCrew.name}</h2>
                         <Paragrahp text={currentCrew.bio} />
                     </section>
                     <NavOptions>
@@ -38,7 +38,7 @@ const CrewComponent = () => {
             </ContainerChild>
             <ContainerChild>
                 <section className='w-full h-full flex flex-col mt-2 items-center justify-center'>
-                    <img src={currentCrew.images.png} alt="pic.person" className='w-[300px] flex h-full' />
+                    <img src={currentCrew.images.png} alt="pic.person" className=' w-[227px] h-[250px] md:w-[300px] md:h-full ' />
                 </section>
             </ContainerChild>
         </ContainerContext>
