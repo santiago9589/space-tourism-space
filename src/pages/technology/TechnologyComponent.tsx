@@ -4,6 +4,7 @@ import ContainerContext from '../../components/containerContent/ContainerContext
 import Paragrahp from '../../components/paragrahp/Paragrahp'
 import { useTech } from "../../../hooks/useTech"
 import LinkComponentTech from './LinkTech'
+import { AnimatePresence, motion } from "framer-motion"
 
 const TechnologyComponent = () => {
 
@@ -30,21 +31,44 @@ const TechnologyComponent = () => {
                             }
                         </nav>
                         <section className='p-2 box-border flex flex-col w-full justify-center items-center'>
-                            <h3 className='barlow text-[16px] uppercase tracking-[2.45px] text-lilaReq'>the technology</h3>
-                            <h1 className="font-bellefair text-[40px] text-center text-whiteReq uppercase">{currentTecnology?.name}</h1>
-                            <Paragrahp text={currentTecnology.description} />
+                            <AnimatePresence mode='wait'>
+                                <motion.h3
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    key={currentTecnology.name}
+                                    className='barlow text-[16px] uppercase tracking-[2.45px] text-lilaReq'>the technology</motion.h3>
+                                <motion.h1
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    key={currentTecnology?.name}
+                                    className="font-bellefair text-[40px] text-center text-whiteReq uppercase">{currentTecnology?.name}</motion.h1>
+                                <motion.p
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    key={currentTecnology.description} className='text-center font-bellefair  text-[16px] md:text-[28px] text-whiteReq uppercase'>{currentTecnology.description}</motion.p>
+                            </AnimatePresence>
                         </section>
                     </article>
                 </section>
             </ContainerChild>
             <ContainerChild>
-                <section className='w-full h-full xl:flex xl:flex-col  xl:items-center xl:justify-center'>
-                            <img 
+                <AnimatePresence mode="wait">
+                    <motion.section
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        key={currentTecnology.images.portrait}
+                        className='w-full h-full xl:flex xl:flex-col  xl:items-center xl:justify-center'>
+                        <img
                             src={currentTecnology.images.portrait}
-                             alt="img.tecnology"
-                             className="w-full h-[170px] md:w-full md:h-[310px] xl:w-[450px] xl:h-[450px]"
-                             />
-                </section>
+                            alt="img.tecnology"
+                            className="w-full h-[170px] md:w-full md:h-[310px] xl:w-[450px] xl:h-[450px]"
+                        />
+                    </motion.section>
+                </AnimatePresence>
             </ContainerChild>
         </ContainerContext>
     )
