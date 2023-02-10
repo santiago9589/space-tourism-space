@@ -2,6 +2,7 @@ import { Destination } from "../src/types/destination"
 import { Crew } from "../src/types/crew"
 import { Technology } from "../src/types/technology"
 import logo from "../src/assets/destination/image-europa.png"
+import { LinksUrl } from "../src/types/LinkUrl"
 
 const dataDestination: Destination[] = [
     {
@@ -111,6 +112,24 @@ const dataTechnology: Technology[] = [
     }
 ]
 
+const links: LinksUrl[] = [{
+    title: "01 home",
+    url: "/"
+},
+{
+    title: "02 destination",
+    url: "/destination"
+},
+{
+    title: "03 crew",
+    url: "/crew"
+},
+{
+    title: "04 technology",
+    url: "/technology"
+},
+]
+
 
 export const api = {
     destination: async (): Promise<Destination[]> => {
@@ -122,4 +141,7 @@ export const api = {
     technology: async (): Promise<Technology[]> => {
         return dataTechnology
     },
+    list: async():Promise<LinksUrl[]> =>{
+        return links
+    }
 }

@@ -16,7 +16,7 @@ const DestinationComponent = () => {
             <ContainerChild>
                 <section
                     className='w-full h-full flex flex-col'>
-                    <h1 className="font-barlow md:text-[28px] text-[16px] text-start text-whiteReq uppercase tracking-[2.50px]">02 pick your destination</h1>
+                    <h1  className="font-barlow md:text-[28px] text-[16px] text-start text-whiteReq uppercase tracking-[2.50px]">02 pick your destination</h1>
                     <AnimatePresence mode="wait">
                         <motion.section
                             initial={{ opacity: 0 }}
@@ -45,40 +45,41 @@ const DestinationComponent = () => {
                             })
                         }
                     </NavOptions>
-                    <article className='w-full h-full flex items-center flex-col '>
+                    <article data-testid="article-info" className='w-full h-full flex items-center flex-col '>
                         <AnimatePresence mode="wait">
-                            <motion.h1 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            key={currentDestination?.name}
-                            className="font-bellefair text-[59px] md:text-[80px] xl:text-[100px] text-center text-whiteReq uppercase">{currentDestination?.name}</motion.h1>
+                            <motion.h1
+                                data-testid={`${currentDestination?.name}-id`}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                key={currentDestination?.name}
+                                className="font-bellefair text-[59px] md:text-[80px] xl:text-[100px] text-center text-whiteReq uppercase">{currentDestination?.name}</motion.h1>
                             <Paragrahp text={currentDestination?.description!} />
                             <section className='flex flex-col md:flex-row items-center w-full md:w-2/3  h-1/3 md:h-1/4 border-t-[0.5px] mt-2 md:mt-6 xl:mt-12 md:justify-around border-lilaReq '>
                                 <section>
-                                    <motion.h2 
-                                     initial={{ opacity: 0 }}
-                                     animate={{ opacity: 1 }}
-                                     exit={{ opacity: 0 }}
-                                     key={currentDestination?.name}
-                                    className='text-center font-barlow   md:text-[14px] tracking-[2.4px] text-lilaReq'>AVG.DISTANCE</motion.h2>
-                                    <motion.p 
-                                     initial={{ opacity: 0 }}
-                                     animate={{ opacity: 1 }}
-                                     exit={{ opacity: 0 }}
-                                     key={currentDestination?.name}className='text-center font-bellefair  md:text-[28px] text-whiteReq uppercase'>{currentDestination?.distance}</motion.p>
+                                    <motion.h2
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        key={currentDestination?.name}
+                                        className='text-center font-barlow   md:text-[14px] tracking-[2.4px] text-lilaReq'>AVG.DISTANCE</motion.h2>
+                                    <motion.p
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        key={currentDestination?.name} className='text-center font-bellefair  md:text-[28px] text-whiteReq uppercase'>{currentDestination?.distance}</motion.p>
                                 </section>
                                 <section>
-                                    <motion.h2 
-                                     initial={{ opacity: 0 }}
-                                     animate={{ opacity: 1 }}
-                                     exit={{ opacity: 0 }}
-                                     key={currentDestination?.name}className='text-center font-barlow   md:text-[14px] tracking-[2.4px] text-lilaReq'>EST.TRAVEL TIME</motion.h2>
-                                    <motion.p 
-                                     initial={{ opacity: 0 }}
-                                     animate={{ opacity: 1 }}
-                                     exit={{ opacity: 0 }}
-                                     key={currentDestination?.name}className='text-center font-bellefair  md:text-[28px] text-whiteReq uppercase'>{currentDestination?.travel}</motion.p>
+                                    <motion.h2
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        key={currentDestination?.name} className='text-center font-barlow   md:text-[14px] tracking-[2.4px] text-lilaReq'>EST.TRAVEL TIME</motion.h2>
+                                    <motion.p
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        key={currentDestination?.name} className='text-center font-bellefair  md:text-[28px] text-whiteReq uppercase'>{currentDestination?.travel}</motion.p>
                                 </section>
                             </section>
                         </AnimatePresence>

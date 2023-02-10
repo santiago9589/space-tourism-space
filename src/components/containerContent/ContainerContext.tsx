@@ -26,7 +26,8 @@ const ContainerContext = ({children}:props) => {
     initial="hidden"
     animate="visible"
     exit="exit"
-    className='md:gap-4  gap-1 box-border md:m-2 md:p-4 flex flex-col h-full md:mt-8 xl:flex-row xl:h-3/4'>
+    data-testid="ContainerContext"
+    className='md:gap-4 gap-1 box-border md:m-2 md:p-4 flex flex-col h-full md:mt-8 xl:flex-row xl:h-3/4'>
         {children}
     </motion.section>
   )
