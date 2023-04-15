@@ -1,11 +1,16 @@
-# space-tourism-space 
+Space-Tourism-Space 
 
-Una aplicacion que sirve para dar a conocer un sevicio de turismo en el espacio,muestra los distintos destinos, grupos y maquinarias involucradas en el mismo
+Descripción 📑
+Es un proyecto el cual muestra una propuesta turistica por el espacio, se da a conocer los distintos destinos como tambien su tripulacion y maquinaria implementada.
 
-La aplicacion se desarrollo con Vite.
+¿Qué he aprendido en este proyecto? 🙇🏻
+Ha sido un desafio la implementacion de test unitarios a los componentes implicados, como tambien la utilizacion de la libreria motion para la generacion de animaciones 
 
-Se utilizo ReactJs para el diseño.
-Se utilizo TailwinCss para el estilado.
-Se utilizo framer motion para la animacion.
-Se utilizo Vitest para testear las funcionalidades.
+Tecnologías 🛠
+HTML TAILWINCSS REACT MOTION JEST 
 
+Autor ✒️
+SANTIAGO PARRA
+
+email:santiagodejesus587@gmail.com
+linkeid:www.linkedin.com/in/santiago-parra-563318185
